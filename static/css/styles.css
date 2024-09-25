@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+body.light-mode {
+    background-color: #f0f0f5;
+    color: #000;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* Light mode */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    width: 500px;
+    z-index: 1;
+}
+
+body.dark-mode .container {
+    background-color: rgba(30, 30, 30, 0.9); /* Dark mode */
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+input, pre {
+    background-color: #e0e0e0; /* Light mode */
+    color: #000; 
+}
+
+body.dark-mode input,
+body.dark-mode pre {
+    background-color: #333; /* Dark mode */
+    color: #fff;
+}
+
+input {
+    padding: 15px;
+    margin-bottom: 15px;
+    width: calc(100% - 30px);
+    border-radius: 5px;
+    border: solid thin #ddd;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    gap: 10px; /* Space between buttons */
+}
+
+button, select {
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+pre {
+    text-align: left;
+    padding: 20px;
+    border-radius: 5px;
+    white-space: pre-wrap; /* Allows text to wrap */
+    word-wrap: break-word; /* Breaks long words */
+    background-color: #e0e0e0; /* Light mode */
+    color: #000;
+}
+
+body.dark-mode pre {
+    background-color: #333; /* Dark mode */
+    color: #fff;
+}
+
+.toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#themeToggle {
+    background-color: transparent;
+    border: none;
+    font-size: 24px; 
+}
