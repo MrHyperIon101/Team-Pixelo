@@ -24,9 +24,9 @@ Affix an image of the flow diagram/architecture diagram of the solution
 #### Technical Description
 
 An overview of:
-* What technologies/versions were used
+* What technologies/versions were used: HTML, CSS, JS, PYTHON(FLASK, MYSQL CONNECTIVITY, PLATFORM, ETC)
 
-* Setup/Installations required to run the solution
+* Setup/Installations required to run the solution:
 
 * Instructions to run the submitted code
 
