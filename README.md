@@ -26,9 +26,107 @@ Affix an image of the flow diagram/architecture diagram of the solution
 An overview of:
 * What technologies/versions were used: HTML, CSS, JS, PYTHON(FLASK, MYSQL CONNECTIVITY, PLATFORM, ETC)
 
-* Setup/Installations required to run the solution:
+## Collaboration Steps
 
-* Instructions to run the submitted code
+_For those who want to collaborate on GitHub, follow the steps below:_
+
+1. **Download Git**
+   - Download Git for Windows from your preferred browser.
+   - During installation, do not interfere with any customized options.
+
+2. **Fork the Repository**
+   - Open GitHub and create a fork of this repository on your profile.
+
+3. **Clone the Repository**
+   - Create a folder on your drive where you want to work on this repo.
+   - Go to the address bar, click on it, type `CMD`, and press Enter to open a command prompt window.
+   - Type: 
+     ```bash
+     git clone <HTTPS-link-of-this-repo>
+     ```
+
+4. **Open in VS Code**
+   - Type:
+     ```bash
+     code <HTTPS-link-of-this-repo>
+     ```
+   - Then type:
+     ```bash
+     code ./
+     ```
+   - This will open a VS Code window with your directory connected.
+
+## Prerequisites
+
+_To run the provided Flask application, you need to install several Python modules. Here is a list of the required modules and how you can install them:_
+
+- **Flask**: This is the main framework used to create the web application.
+  ```bash
+  pip install Flask
+  pip install mysql-connector-python
+```
+
+(You have to go to your python installation folder to install pip by opening cmd in that directory)
+
+By following these steps, you will have all the necessary modules installed to run your Flask application._
+
+## Contribution Workflow
+Now you can finally work on this code. Collaborate and add more features as much as you want. After your work is complete, do the following steps in order to upload it again to your forked repo:
+1. Navigate to your project directory:
+
+   ```bash
+   cd Syntax-Slayers
+   ```
+
+2. For those working on code:
+
+   ```bash
+   cd Syntax-Slayers
+   ```
+
+3. For frontend team:
+- First execute the above line, then:
+   ```bash
+   cd static
+   cd css  # For CSS
+   ```
+   ```bash
+   cd static
+   cd js  # For CSS
+   ```
+   ```bash
+   cd templates  # For HTML
+   ```
+
+4. Initialize Git (if not already initialized):
+
+   ```bash
+   git init
+   ```
+
+5. Check status and stage changes:
+
+   ```bash
+   git status
+   ```
+      ```bash
+   git add <file-name>
+   ```
+      ```bash
+   git status #Ensure file is staged
+   ```
+
+6. Commit and push changes:
+
+      ```bash
+   git commit -m "Updated by Your Name"
+   ```
+      ```bash
+   git push
+   ```
+
+Congratulations!
+You have successfully completed all the steps! Happy collaborating!
 
 ### Screenshots
 Affix the relevant screenshots of the developed project here.
