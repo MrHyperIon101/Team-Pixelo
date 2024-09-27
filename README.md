@@ -64,7 +64,7 @@ _To run the provided Flask application, you need to install several Python modul
   ```bash
   pip install Flask
   pip install mysql-connector-python
-```
+  ```
 
 (You have to go to your python installation folder to install pip by opening cmd in that directory)
 
