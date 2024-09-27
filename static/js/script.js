@@ -102,13 +102,21 @@ function checkLatency() {
  
     if (body.classList.contains('light-mode')) {
         body.classList.replace('light-mode', 'dark-mode');
-        document.getElementById('themeToggle').textContent = '☀️';
+        document.getElementById('themeToggle').textContent = '🌔';
     } else {
         body.classList.replace('dark-mode', 'light-mode');
-        document.getElementById('themeToggle').textContent = '🌙';
+        document.getElementById('themeToggle').textContent = '🌒';
     }
  }
+
+ function showMainContent() {
+    const intro = document.getElementById('intro');
+    const mainContent = document.getElementById('mainContent');
  
+    intro.style.display = 'none';
+    mainContent.style.display = 'block';
+    mainContent.classList.add('fade-in');
+ }
  function fetchLocations() {
     fetch('/locations')
     .then(response => response.json())
