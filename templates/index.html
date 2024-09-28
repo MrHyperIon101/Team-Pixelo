@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Network Monitoring System</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-     
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="intro" class="intro-container">
@@ -48,6 +48,15 @@
                 </select>
             </div>
             <pre id="stabilityResult"></pre>
+        </div>
+        <div class="section">
+            <h2>Network Stability Analysis</h2>
+            <select id="graphLocationSelect">
+                <option value="" disabled selected>Select Location</option>
+                <!-- Options will be dynamically populated -->
+            </select>
+            <button onclick="generateGraph()">Generate Graph</button>
+            <img src="{{ url_for('static', filename='latency_plot.png') }}" alt="Latency Plot" id="latencyPlot">
         </div>
     </div>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>

@@ -23,7 +23,47 @@ function performPing() {
     .catch(error => console.error('Error:', error));
  }
  
- 
+ function fetchLocations() {
+    fetch('/locations')
+    .then(response => response.json())
+    .then(locations => {
+        const selects = [
+            document.getElementById('locationSelect'),
+            document.getElementById('locationSelectLatency'),
+            document.getElementById('stabilityLocationSelect'),
+            document.getElementById('graphLocationSelect')
+        ];
+        
+        locations.forEach(location => {
+            selects.forEach(select => {
+                const option = document.createElement('option');
+                option.value = location;
+                option.textContent = location;
+                select.appendChild(option);
+            });
+        });
+    })
+    .catch(error => console.error('Error fetching locations:', error));
+}
+
+function generateGraph() {
+    const location = document.getElementById('graphLocationSelect').value || 'default_location';
+    const darkMode = document.body.classList.contains('dark-mode');
+
+    fetch('/generate_graph', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ location, darkMode })
+    })
+    .then(response => response.json())
+    .then(data => {
+        const img = document.getElementById('latencyPlot');
+        img.src = '/static/latency_plot.png?' + new Date().getTime();
+    })
+    .catch(error => console.error('Error:', error));
+}
  function selectLocation() {
     const locationSelect = document.getElementById('locationSelect');
     alert(`Selected Location: ${locationSelect.value}`);
@@ -107,6 +147,7 @@ function checkLatency() {
         body.classList.replace('dark-mode', 'light-mode');
         document.getElementById('themeToggle').textContent = '🌒';
     }
+    generateGraph();
  }
 
  function showMainContent() {
@@ -117,30 +158,12 @@ function checkLatency() {
     mainContent.style.display = 'block';
     mainContent.classList.add('fade-in');
  }
- function fetchLocations() {
-    fetch('/locations')
-    .then(response => response.json())
-    .then(locations => {
-        const selects = [
-            document.getElementById('locationSelect'),
-            document.getElementById('locationSelectLatency'),
-            document.getElementById('stabilityLocationSelect')
-        ];
-        
-        locations.forEach(location => {
-            selects.forEach(select => {
-                const option = document.createElement('option');
-                option.value = location;
-                option.textContent = location;
-                select.appendChild(option);
-            });
-        });
-    })
-    .catch(error => console.error('Error fetching locations:', error));
- }
- 
+ document.addEventListener('DOMContentLoaded', function() {
+    typeWriter('Try The Latency Test Now', 'latencyResult');
+    typeWriter('Wanna Know How Stable Your Internet is?', 'stabilityResult');
+});
  
  document.addEventListener('DOMContentLoaded', () => {
-    document.body.classList.add('light-mode'); // Default to light mode
-    fetchLocations(); // Populate dropdown on load
+    document.body.classList.add('light-mode');
+    fetchLocations();
  });

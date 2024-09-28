@@ -1,47 +1,66 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     overflow: hidden;
+    min-height: 100vh; /* Ensure full height */
+    overflow-y: auto; /* Enable vertical scrolling */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('https://media.getmyuni.com/azure/college-images-test/sikkim-manipal-institute-of-technology-east-sikkim/exterior-images-fa657c597665069e067ccc2c92367c65.webp');
+    background-image: url('https://cdn.prod.website-files.com/6009ec8cda7f305645c9d91b/638770ac54a788571cae658a_Webflow%20Blog%20Header%20-%20Desktop%201%20(1).png');
     background-size: cover;
 }
-
 .intro-container {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 40px;
-    border-radius: 8px;
+    border-radius: 50px;
     box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
 }
 body.light-mode {
     background-color: #f0f0f5;
     color: #000;
 }
+body.light-mode .container h1,
+body.light-mode .container h2,
+body.light-mode .container pre {
+    color: #000;
+}
 
+body.dark-mode .container h1,
+body.dark-mode .container h2,
+body.dark-mode .container pre {
+    color: #fff;
+}
 body.dark-mode {
     background-color: #121212;
     color: #fff;
 }
-
+img {
+    max-width: 100%;
+    height: auto;
+}
 .container {
-    display: none; /* Hidden initially */
-    width: 900px; /* Fixed width for consistent size */
+    font-family: 'Montserrat', sans-serif;
     max-width: 90%; /* Ensure it doesn't exceed viewport width */
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    max-height: 75vh; /* Ensure it doesn't exceed viewport height */
+    overflow-y: auto; /* Enable vertical scrolling within the container */
+    display: none;
+    margin: auto;
+    width: 900px;
+    max-width: 90%;
+    overflow-x: hidden;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 40px;
-    border-radius: 8px;
+    border-radius: 60px;
     box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
-    transition: background-color 0.5s ease, box-shadow 0.5s ease; /* Smooth transition for container */
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
 
 body.dark-mode .container {
-    background-color: rgba(30, 30, 30, 0.9); /* Dark mode */
+    background-color: rgba(30, 30, 30, 0.9);
 }
 
 .section {
@@ -49,55 +68,45 @@ body.dark-mode .container {
 }
 
 input, pre {
-    background-color: #e0e0e0; /* Light mode */
+    background-color: #e0e0e0;
     color: #000; 
+    font-family: 'Montserrat', sans-serif;
 }
 
 body.dark-mode input,
 body.dark-mode pre {
-    background-color: #333; /* Dark mode */
+    background-color: #333;
     color: #fff;
 }
 
 input {
+    font-family: 'Montserrat', sans-serif;
     padding: 15px;
     margin-bottom: 15px;
     width: calc(100% - 30px);
     border-radius: 5px;
-    border: solid thin #ddd;
+    border: transparent;
 }
 
 .button-group {
     display: flex;
-    justify-content: center; /* Center the buttons */
-    gap: 10px; /* Space between buttons */
+    justify-content: center;
+    gap: 10px;
 }
 
-button, select {
-    padding: 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
-/*button:hover {
-    background-color: #0056b3;
-}
-*/
 pre {
     text-align: left;
     padding: 20px;
     border-radius: 5px;
-    white-space: pre-wrap; /* Allows text to wrap */
-    word-wrap: break-word; /* Breaks long words */
-    background-color: #e0e0e0; /* Light mode */
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: #e0e0e0;
     color: #000;
 }
 
 body.dark-mode pre {
-    background-color: #333; /* Dark mode */
+    background-color: #333;
     color: #fff;
 }
 
@@ -105,16 +114,16 @@ body.dark-mode pre {
     position: absolute;
     top: 20px;
     right: 20px;
-    z-index: 10; /* Ensure it's above other elements */
-    background-color: white; /* Default light mode */
+    z-index: 10;
+    background-color: white;
     padding: 5px;
-    border-radius: 8px;
+    border-radius: 100px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease;
 }
 
 body.dark-mode .toggle-container {
-    background-color: black; /* Dark mode */
+    background-color: black;
 }
 
 #themeToggle {
@@ -125,24 +134,25 @@ body.dark-mode .toggle-container {
 }
 
 .fade-in {
-    opacity: 0; /* Start hidden */
-    animation: fadeIn 1s forwards; /* Apply animation */
+    opacity: 0;
+    animation: fadeIn 1s forwards;
 }
 button, select {
+    font-family: 'Montserrat', sans-serif;
     position: relative;
     padding: 15px;
-    background-color: #004d42;
+    background-color: #c47ce6;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 button:hover, select:hover {
-    transform: scale(1.1); /* Slightly larger on hover */
-    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.3); /* Glow effect */
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.3);
 }
 
 button::before, select::before {
