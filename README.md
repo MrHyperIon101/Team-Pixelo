@@ -24,7 +24,7 @@ Affix an image of the flow diagram/architecture diagram of the solution
 #### Technical Description
 
 An overview of:
-* What technologies/versions were used: HTML, CSS, JS, PYTHON(FLASK, MYSQL CONNECTIVITY, PLATFORM, ETC)
+* What technologies/versions were used: HTML, CSS, JS, PYTHON(FLASK, MYSQL CONNECTIVITY, PLATFORM, MATPLOTLIB, NUMPY)
 
 ## Collaboration Steps
 
