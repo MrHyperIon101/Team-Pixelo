@@ -75,13 +75,13 @@ Now you can finally work on this code. Collaborate and add more features as much
 1. Navigate to your project directory:
 
    ```bash
-   cd Syntax-Slayers
+   cd Team-Pixelo
    ```
 
 2. For those working on code:
 
    ```bash
-   cd Syntax-Slayers
+   cd Team-Pixelo
    ```
 
 3. For frontend team:
