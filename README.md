@@ -1,4 +1,4 @@
-# Syntax-Slayers
+# Team Pixelo
 Project Name: AI for Wi-Fi Outage Prediction at SMIT
 
 ### Project Overview
